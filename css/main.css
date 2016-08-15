@@ -1,0 +1,195 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #f9f9f9;
+}
+
+.menu-horizont, .items, .item {
+	display: inline-block;
+}
+
+.menu-horizont {
+    position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 272px;
+	background-color: #2B2F3E;
+}
+
+.menu--header, .items--header, .item--header {
+	font-family: 'Open Sans';
+    font-style: condensed;
+   	font-size: 36px;
+}
+
+.menu-horizont .menu--header {
+	display: block;
+	color: #565A69;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.menu-horizont .menu--list {
+	padding: 0;
+	margin-top: 40px;
+	list-style: none;
+}
+
+.menu--list li a{
+	display: block;
+	text-decoration: none;
+	background-color: #ff3952;
+	padding-left: 30px;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: white;
+	box-sizing: border-box;
+	font-family: 'Open Sans';
+	font-size: 18px;
+}
+
+.items {
+	background-color: #fff;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.42);
+	vertical-align: top;
+	margin: 35px;
+	margin-left: 307px;
+	width: 480px;
+	min-height: 500px;
+}
+
+.items .items--header {
+	display: block;
+	padding: 30px;
+	color: #565A69;
+}
+
+.items input[type="text"] { 
+    margin-left: 30px;
+    box-sizing: border-box;
+    padding: 6px 15px;
+    height: 37px;
+    width: 290px;
+    color: #b3b3b3;
+    background: #fff;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+.items .btn {
+	cursor: pointer;
+    width: 130px;
+    padding: .78571429em 1.5em;
+    box-sizing: border-box;
+    border: none;
+    vertical-align: top;
+    background: #27CCC0;
+    color: #fff;
+    margin-left: 10px;
+    text-transform: none;
+    text-shadow: none;
+    line-height: 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+.items .items--list {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 20px 0 0 30px;
+}
+
+.items .items--list li {
+	position: relative;
+	display: block;
+	margin-bottom: 30px;
+	margin-right: 15px;
+	width: 100%;
+}
+
+.items .items--list li:after, li.item__active:before {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: -15px;
+	content: ' ';
+	width: 96%;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+
+.items .items--list li a {
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-variant: normal;
+	font-weight:600;
+}
+
+
+.items .items--list li .btn__delete {
+    position: absolute; /* блок занимает ширину содержимого, max-width её ограничивает */
+	top: 0; /* прикрепить к верху родителя */
+	right: 15px;
+	cursor: pointer;
+    outline: 0;
+    border: none;
+    background: 0 0;
+    box-shadow: 0 0 0 1px #ff3d63 inset;
+    color: #ff3d63;
+   	font-family: 'Open Sans';
+    font-style: condensed;
+    padding: .78571429em 1.5em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.items .items--list li .list__label {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	left: 30px;
+	height: 30px;
+	width: 50px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #27CCC0;
+	color: #fff;
+	border-radius: 15px;
+}
+
+.items .items--list li.item__active {
+	position: relative;
+}
+
+.items .items--list li.item__active:after {
+	position: absolute;
+	display: block;
+	top: -10px;
+	left: -33px;
+	content: '';
+	height: 55px;
+	width: 5px;
+	background-color: #ff2f5a;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to EPP! - Empeek Test Task</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
+</head>
+<body>
+	<div class="menu-horizont">
+		<span class="menu--header">Main</span>
+
+		<ul class="menu--list">
+			<li><a href="#">Overview</a></li>
+		</ul>
+	</div>
+
+	<div class="items">
+		<span class="items--header">Items</span>
+
+		<input type="text" placeholder="Type name here...">
+		<button type="button" class="btn">Add new</button>
+
+		<ul class="items--list">
+			<li>
+				<a href="">First item with custom name</a>
+				<span class="list__label">132</span>
+				<button type="button" class="btn__delete">Delete</button>
+			</li>
+			<li class="item__active">
+				<a href="">Second item is active</a>
+				<span class="list__label">3</span>
+				<button type="button" class="btn__delete">Delete</button>
+			</li>
+		</ul>
+	</div>
+
+	<div class="item">
+		<span class="item--header">Comments ID</span>
+
+		<ul class="comment--list">
+			<li>
+				<div class="comment--photo-odd"></div>
+				<span class="comment--text">A lot of text typing here</span>
+			</li>
+			<li>
+				<div class="comment--photo-even"></div>
+				<span class="comment--text">A lot of text typing here</span>
+			</li>
+			<li>
+				<div class="comment--photo-odd"></div>
+				<span class="comment--text">A lot of text typing here</span>
+			</li>
+		</ul>
+
+		<div class="item--photo"></div>
+		<textarea class="item--input"></textarea>
+	</div>
+</body>
+</html>
