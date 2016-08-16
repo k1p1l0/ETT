@@ -7,7 +7,9 @@ body {
 	background-color: #f9f9f9;
 }
 
-.menu-horizont, .items, .item {
+.menu-horizont, 
+.items, 
+.item {
 	display: inline-block;
 }
 
@@ -21,7 +23,10 @@ body {
 	background-color: #2B2F3E;
 }
 
-.menu--header, .items--header, .item--header {
+/* FONTS FOR ALL HEADERS*/
+.menu--header, 
+.items--header, 
+.item--header {
 	font-family: 'Open Sans';
     font-style: condensed;
    	font-size: 36px;
@@ -56,14 +61,16 @@ body {
 /*************************************** MENU END *******************************************/
 
 
-.items, .item {
+.items, 
+.item {
 	background-color: #fff;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.42);
 	vertical-align: top;
 	min-height: 500px;
 }
 
-.items--header, .item--header {
+.items--header, 
+.item--header {
 	display: block;
 	padding: 30px;
 	color: #565A69;
@@ -129,7 +136,8 @@ body {
 	width: 100%;
 }
 
-.items .items--list li:after, li.item__active:before {
+.items .items--list li:after, 
+.items .items--list li.item__active:before {
 	position: absolute;
 	display: block;
 	left: 0;
@@ -210,7 +218,8 @@ body {
 
 /************************************* ITEM START ******************************************/
 .item {
-	width: 405px;
+	position: relative;
+	width: 444px;
 	margin-top: 35px;
 }
 
@@ -230,7 +239,7 @@ body {
 	font-family: 'Open Sans';
 }
 
-.item .comment--list li:after {
+.item .comment--list li:not(:last-child):after {
 	position: absolute;
 	display: block;
 	left: 18px;
@@ -240,18 +249,29 @@ body {
 	border-bottom: 1px solid #f5f5f5;
 }
 
-.comment--list li .comment--photo-odd:after, .comment--photo-even:after {
+.item .comment--list li .comment--photo,
+.item .item--photo {
 	position: absolute;
 	left: 18px;
 	content: ' ';
 	height: 52px;
 	width: 52px;
+	background-color: #E6E6E6;
 }
 
-.comment--photo-even:after {
+.item .comment--list li:nth-of-type(odd) .comment--photo {
 	background-color: #FF8A00;
 }
 
-.comment--photo-odd:after {
+.item .comment--list li:nth-of-type(even) .comment--photo {
 	background-color: #47568C;
+}
+
+.item .item--input {
+	margin-left: 85px;
+	margin-bottom: 14px;
+	width: 335px;
+	height: 70px;
+	resize: none;
+	border: 2px solid #e5e5e5;
 }
