@@ -1,0 +1,23 @@
+{
+  "name": "Empeek Test Task",
+  "homepage": "https://github.com/k1p1l0/ETT",
+  "authors": [
+    "k1p1l0 <s0ht@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-local-storage": "^0.3.0",
+    "sshelp.js": "sshelp#^1.0.4"
+  }
+}

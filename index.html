@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="empeekApp">
 <head>
 	<title>Welcome to EPP! - Empeek Test Task</title>
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+
+	<script src="bower_components/sshelp.js/sshelp.js"></script>
+
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers/ItemController.js"></script>
+	<script src="js/app/controllers/ItemsController.js"></script>
+
+	<script src="js/service/mediator.service.js"></script>
 </head>
 <body>
 	<div class="menu-horizont">
@@ -16,50 +28,6 @@
 		</ul>
 	</div>
 
-	<div class="items">
-		<span class="items--header">Items</span>
-
-		<input type="text" placeholder="Type name here...">
-		<button type="button" class="btn">Add new</button>
-
-		<ul class="items--list">
-			<li>
-				<a href="">First item with custom name</a>
-				<span class="list__label">132</span>
-				<button type="button" class="btn__delete">Delete</button>
-			</li>
-			<li class="item__active">
-				<a href="">Second item is active</a>
-				<span class="list__label">3</span>
-				<button type="button" class="btn__delete">Delete</button>
-			</li>
-		</ul>
-	</div>
-
-	<div class="item">
-		<span class="item--header">Comments ID</span>
-
-		<ul class="comment--list">
-			<li>
-				<div class="comment--photo"></div>
-				<span class="comment--text">We use the quantifiers much, many, a lot of, lots of to talk about quantities, amounts and degree. We can use them with a noun (as a determiner) or without a noun (as a pronoun).</span>
-			</li>
-			<li>
-				<div class="comment--photo"></div>
-				<span class="comment--text">We use the quantifiers much, many, a lot of, lots of to talk about quantities, amounts and degree. We can use them with a noun (as a determiner) or without a noun (as a pronoun).</span>
-			</li>
-			<li>
-				<div class="comment--photo"></div>
-				<span class="comment--text">We use the quantifiers much, many, a lot of, lots of to talk about quantities, amounts and degree. We can use them with a noun (as a determiner) or without a noun (as a pronoun).</span>
-			</li>
-			<li>
-				<div class="comment--photo"></div>
-				<span class="comment--text">We use the quantifiers much, many, a lot of, lots of to talk about quantities, amounts and degree. We can use them with a noun (as a determiner) or without a noun (as a pronoun).</span>
-			</li>
-		</ul>
-
-		<div class="item--photo"></div>
-		<textarea class="item--input"></textarea>
-	</div>
+	<ng-view></ng-view>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<div class="items" ng-controller="itemsCntrl">
+	<span class="items--header">Items</span>
+
+	<input type="text" placeholder="Type name here..." ng-model="input">
+	<button type="button" class="btn" ng-click="addItem(input)">Add new</button>
+
+	<ul class="items--list">
+		<li ng-repeat="item in items" ng-class="{ item__active: item.id == activeId }">
+			<a href="#/items/{{ item.id }}" ng-click="activeId = item.id">{{ item.name }}</a>
+			<span class="list__label">{{ item.comments.length }}</span>
+			<button type="button" class="btn__delete" ng-click="itemRemove(item.id)">Delete</button>
+		</li>
+	</ul>
+</div>

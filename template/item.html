@@ -1,0 +1,15 @@
+<ng-include src="'template/home.html'"></ng-include>
+
+<div class="item">
+	<span class="item--header">Comments #{{ item.id }}</span>
+
+	<ul class="comment--list">
+		<li ng-repeat="comment in item.comments">
+			<div class="comment--photo"></div>
+			<span class="comment--text">{{ comment.text }}</span>
+		</li>
+	</ul>
+
+	<div class="item--photo"></div>
+	<textarea class="item--input" ng-keyup="$event.keyCode == 13 && blurCallback($event)"></textarea> 
+</div>
