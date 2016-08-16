@@ -1,27 +1,18 @@
-empeekApp.controller('itemCntrl', ['$scope', '$routeParams', 'localStorageService', 'Mediator',
-  function($scope, $routeParams, $localStorageService, Mediator) {
-
-    // Mediator.subscribe('item:update', 1, update);
-
-    // function update (value) {
-    //   $scope.item = value;
-    //   SS.log(value);
-    // }
+empeekApp.controller('itemCntrl', ['$scope', '$routeParams', 'localStorageService',
+  function($scope, $routeParams, $localStorageService) {
 
     $scope.activeId = $routeParams.id;
 
-    // (function init () {
-    //   var items = $localStorageService.get('items');
-
-    //   for (item in items) {
-    //       if ($scope.activeId === items[item].id) {
-    //           $scope.item = items[item];
-    //       }
-    //   }
-    // })();
+    (function init () {
+        $scope.item = $localStorageService.get($scope.activeId);
+    })();
 
     $scope.addComment = function (event) {
-      var text = event.target.value;
+      var inputText = event.target.value;
+
+      $scope.item.comments.push({text: inputText});
+
+      $localStorageService.set($scope.activeId, $scope.item);
 
       event.target.value = '';
     };

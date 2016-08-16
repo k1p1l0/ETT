@@ -1,7 +1,7 @@
 <ng-include src="'template/home.html'"></ng-include>
 
 <div class="item">
-	<span class="item--header">Comments #{{ item.id }}</span>
+	<span class="item--header">Comments #{{ item.name | limitLength }}</span>
 
 	<ul class="comment--list">
 		<li ng-repeat="comment in item.comments">
