@@ -11,6 +11,7 @@ body {
 	display: inline-block;
 }
 
+/************************************* MENU START ******************************************/
 .menu-horizont {
     position: fixed;
 	top: 0;
@@ -52,22 +53,31 @@ body {
 	font-family: 'Open Sans';
 	font-size: 18px;
 }
+/*************************************** MENU END *******************************************/
 
-.items {
+
+.items, .item {
 	background-color: #fff;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.42);
 	vertical-align: top;
-	margin: 35px;
-	margin-left: 307px;
-	width: 480px;
 	min-height: 500px;
 }
 
-.items .items--header {
+.items--header, .item--header {
 	display: block;
 	padding: 30px;
 	color: #565A69;
 }
+
+
+
+/************************************* ITEMS START ******************************************/
+.items {
+	width: 480px;
+	margin: 35px 20px;
+	margin-left: 307px;
+}
+
 
 .items input[type="text"] { 
     margin-left: 30px;
@@ -134,6 +144,7 @@ body {
 	display: inline-block;
 	text-decoration: none;
 	color: #000;
+	line-height: 36px;
 	font-family: 'Open Sans';
 	font-size: 16px;
 	font-variant: normal;
@@ -142,9 +153,9 @@ body {
 
 
 .items .items--list li .btn__delete {
-    position: absolute; /* блок занимает ширину содержимого, max-width её ограничивает */
-	top: 0; /* прикрепить к верху родителя */
-	right: 15px;
+    position: absolute;
+	top: 0; 
+	right: 20px;
 	cursor: pointer;
     outline: 0;
     border: none;
@@ -170,13 +181,14 @@ body {
 	position: relative;
 	top: 0;
 	left: 30px;
-	height: 30px;
-	width: 50px;
-	line-height: 30px;
+	height: 20px;
+	width: 30px;
+	line-height: 20px;
 	text-align: center;
 	background-color: #27CCC0;
 	color: #fff;
 	border-radius: 15px;
+	font-size: 13px;
 }
 
 .items .items--list li.item__active {
@@ -192,4 +204,54 @@ body {
 	height: 55px;
 	width: 5px;
 	background-color: #ff2f5a;
+}
+/************************************* ITEMS END ******************************************/
+
+
+/************************************* ITEM START ******************************************/
+.item {
+	width: 405px;
+	margin-top: 35px;
+}
+
+.item .comment--list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.item .comment--list li {
+	position: relative;
+	min-height: 52px;
+	padding-bottom: 27px;
+	padding-left: 84px;
+	padding-right: 50px;
+	font-size: 12px;
+	font-family: 'Open Sans';
+}
+
+.item .comment--list li:after {
+	position: absolute;
+	display: block;
+	left: 18px;
+	bottom: 10px;
+	content: ' ';
+	width: 90%;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.comment--list li .comment--photo-odd:after, .comment--photo-even:after {
+	position: absolute;
+	left: 18px;
+	content: ' ';
+	height: 52px;
+	width: 52px;
+}
+
+.comment--photo-even:after {
+	background-color: #FF8A00;
+}
+
+.comment--photo-odd:after {
+	background-color: #47568C;
 }
