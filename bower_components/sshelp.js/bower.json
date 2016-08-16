@@ -1,0 +1,13 @@
+{
+  "name": "sshelp.js",
+  "main": "sshelp.js",
+  "version": "0.1.1",
+  "description": "Lib will help you",
+  "keywords": [
+    "javascript"
+  ],
+  "authors": [
+    "Kirill Kozak"
+  ],
+  "license": "MIT"
+}

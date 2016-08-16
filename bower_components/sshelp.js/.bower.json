@@ -1,0 +1,23 @@
+{
+  "name": "sshelp.js",
+  "main": "sshelp.js",
+  "version": "1.0.4",
+  "description": "Lib will help you",
+  "keywords": [
+    "javascript"
+  ],
+  "authors": [
+    "Kirill Kozak"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/k1p1l0/sshelp",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.4",
+    "commit": "d85e6c1ae564e2fae0f50ce93ce2cd642db4590d"
+  },
+  "_source": "https://github.com/k1p1l0/sshelp.git",
+  "_target": "^1.0.4",
+  "_originalSource": "sshelp"
+}
