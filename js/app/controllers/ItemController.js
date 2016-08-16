@@ -1,22 +1,27 @@
-empeekApp.controller('itemCntrl', ['$scope', '$routeParams', 
-  function($scope, $routeParams) {
-  	$scope.activeId = $routeParams.id;
+empeekApp.controller('itemCntrl', ['$scope', '$routeParams', 'localStorageService', 'Mediator',
+  function($scope, $routeParams, $localStorageService, Mediator) {
 
-   	$scope.item = {
-   		id: $routeParams.id,
-   		comments: [{
-   		   			text: SS.createId(7)
-   		   		},
-   		   		{
-   		   			text: SS.createId(7)
-   		   		},
-   		   		{
-   		   			text: SS.createId(7)
-   		   		}]
-   	};
+    // Mediator.subscribe('item:update', 1, update);
 
-    $scope.blurCallback = function (event) {
-      SS.log(event.target.value);
+    // function update (value) {
+    //   $scope.item = value;
+    //   SS.log(value);
+    // }
+
+    $scope.activeId = $routeParams.id;
+
+    // (function init () {
+    //   var items = $localStorageService.get('items');
+
+    //   for (item in items) {
+    //       if ($scope.activeId === items[item].id) {
+    //           $scope.item = items[item];
+    //       }
+    //   }
+    // })();
+
+    $scope.addComment = function (event) {
+      var text = event.target.value;
 
       event.target.value = '';
     };

@@ -1,33 +1,49 @@
-empeekApp.controller('itemsCntrl', ['$scope', '$routeParams',
-  function($scope, $routeParams) {
-  	$scope.items = [
-  			{
-		  		id: 0,
-		  		name: 'Hello',
-		  		comments: {
-		  			length: 5
-		  		}
-  			}, {
-		  		id: 1,
-		  		name: 'Bye!',
-		  		comments: {
-		  			length: 6
-		  		}
-  			}
-  		];
+empeekApp.controller('itemsCntrl', ['$scope', '$routeParams', 'localStorageService', 'Mediator',
+  function($scope, $routeParams, $localStorageService, Mediator) {
 
+  	init();
+
+  	function init () {
+  		var items = [],
+  			itemsKey;
+
+  		itemsKey = $localStorageService.keys();
+
+  		for (let key in itemsKey) {
+  			items.push(getItem(itemsKey[key]));
+  		}
+
+  		$scope.items = items;
+  	}
 
   	$scope.itemRemove = function (id) {
-  		SS.log(id);
+  		removeItem(id);
+
+  		init();
   	};
 
   	$scope.addItem = function (value) {
-  		$scope.items.push({
-  			id: this.length + 1,
-  			name: value,
-  			comments: {
-  				length: 0
-  			}
-  		});
+  		var item = 
+  		{
+  			id: SS.createId(7),
+			name: value,
+			comments: []
+		};
+
+  		setItem(item.id, item);
+
+  		$scope.items.push(item);
   	};
+
+  	function setItem (key, val) {
+   		return $localStorageService.set(key, val);
+  	}
+
+  	function getItem(key) {
+   		return $localStorageService.get(key);
+  	}
+
+  	function removeItem(key) {
+   		return $localStorageService.remove(key);
+  	}
 }]);
